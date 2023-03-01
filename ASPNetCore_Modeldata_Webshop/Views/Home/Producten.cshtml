@@ -6,15 +6,17 @@
 <h1>@ViewData["Title"]</h1>
 
 <form asp-controller="Home" asp-action="Producten" method="get" class="form-inline">
-    @* Op dit moment gaat de select bij het versturen van het formulier terug naar de default waarde ("Kies een categorie...").
-    Het is gebruiksvriendelijker om de huidig geselecteerde waarde te laten zien, hiervoor moet je een ViewModel gebruiken
-    om zowel de lijst producten als de huidige categorie door te geven aan deze View (zie oplossing volgend werkcollege). *@
-    <select name="Categorie" asp-items="Html.GetEnumSelectList<Categorie>()" class="form-select mb-2 mr-sm-2">
-        <option selected="selected" value="">Kies een categorie...</option>
-    </select>
-    <input type="submit" value="Toon" class="btn btn-primary mb-2" />
-</form>
+    <div class="input-group">
 
+        @* Op dit moment gaat de select bij het versturen van het formulier terug naar de default waarde ("Kies een categorie...").
+        Het is gebruiksvriendelijker om de huidig geselecteerde waarde te laten zien, hiervoor moet je een ViewModel gebruiken
+        om zowel de lijst producten als de huidige categorie door te geven aan deze View (zie oplossing volgend werkcollege). *@
+        <select name="Categorie" asp-items="Html.GetEnumSelectList<Categorie>()" class="form-select mb-2 mr-sm-2" onchange="this.form.submit()">
+            <option selected="selected" value="">Kies een categorie...</option>
+        </select>
+        <input type="submit" value="Toon" class="btn btn-primary mb-2" />
+    </div>
+</form>
 
 @if (Model != null)
 {
