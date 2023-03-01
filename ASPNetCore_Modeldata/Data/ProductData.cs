@@ -25,7 +25,7 @@ namespace WebShop.Data
                 new Product { Naam =  "Gaming head set", Beschrijving = "Look! Is it a headphone? Is it a microphone? Nope... it's BOTH!", Categorie = Categorie.Gear, Prijs = 149.99M},
                 new Product { Naam =  "HyperX Keyboard", Beschrijving = "The keys are made of solid tritanium. Featuring a completely useless \"calculator\" button.", Categorie = Categorie.Gear, Prijs = 83.99M},
                 new Product { Naam =  "PDMLV55 Wireless Mouse", Beschrijving = "Featuring over 254 detachable buttons, it will turn (you) into the ultimate gaming tool.", Categorie = Categorie.Gear, Prijs = 255.99M},
-                new Product { Naam =  "Aceus HAL PG051651XXQ Monitor", Beschrijving = "A 65K 55inch 360° 5D monitor with a resolution up to 51000p and a 840hz refresh rate.  Will make your games come to life... literally. VGA cable included.", Categorie = Categorie.Gear, Prijs = 9999.99M}
+                new Product { Naam =  "Aceus HAL PG051651XXQ Monitor", Beschrijving = "A 65K 69inch 360° 5D monitor with a resolution up to 51000p and a 840hz refresh rate.  Will make your games come to life... literally. VGA cable included.", Categorie = Categorie.Gear, Prijs = 9999.99M}
             };
         }
 

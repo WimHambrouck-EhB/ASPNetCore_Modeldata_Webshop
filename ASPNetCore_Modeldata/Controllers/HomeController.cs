@@ -31,6 +31,31 @@ namespace ASPNetCore_Modeldata.Controllers
             return View(productenFiltered);
         }
 
+        public IActionResult Openingsuren()
+        {
+            DateTime nu = DateTime.Now;
+            bool open = false;
+
+            if (nu.DayOfWeek != DayOfWeek.Sunday)
+            {
+                if (nu.DayOfWeek != DayOfWeek.Saturday)
+                {
+                    if (nu.Hour >= 8 && nu.Hour < 20)
+                    {
+                        open = true;
+                    }
+                }
+                else if (nu.Hour >= 10 && nu.Hour < 22)
+                {
+                    open = true;
+                }
+            }
+
+            ViewBag.Open = open;
+
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
