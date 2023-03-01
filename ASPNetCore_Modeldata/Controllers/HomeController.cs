@@ -55,6 +55,28 @@ namespace ASPNetCore_Modeldata.Controllers
 
             return View();
         }
+        public IActionResult Contact()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Contact(string? email, string? naam, string? inhoud)
+        {
+            if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(naam) || string.IsNullOrWhiteSpace(inhoud))
+            {
+                ViewBag.Error = "Gelieve alle veldjes in te vullen!";
+            }
+            else
+            {
+                MailHelper.SendMail(email, naam, inhoud, "wim.hambrouck@ehb.be");
+                ViewBag.Message = "Bericht verzonden!";
+            }
+
+            return View();
+        }
+
 
         public IActionResult Privacy()
         {
