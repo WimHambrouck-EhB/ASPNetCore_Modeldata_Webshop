@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
-using WebShop.Data;
-using WebShop.Models;
+using Webshop.Data;
+using Webshop.Models;
 
-namespace ASPNetCore_Modeldata.Controllers
+namespace ASPNetCore_Modeldata_Webshop.Controllers
 {
     public class HomeController : Controller
     {

@@ -1,6 +1,6 @@
-﻿using WebShop.Models;
+﻿using Webshop.Models;
 
-namespace WebShop.Data
+namespace Webshop.Data
 {
     public static class ProductData
     {
