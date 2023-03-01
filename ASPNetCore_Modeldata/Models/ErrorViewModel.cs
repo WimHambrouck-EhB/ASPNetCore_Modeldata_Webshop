@@ -1,4 +1,4 @@
-namespace ASPNetCore_Modeldata.Models
+namespace WebShop.Models
 {
     public class ErrorViewModel
     {

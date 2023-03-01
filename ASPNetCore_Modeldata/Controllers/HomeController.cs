@@ -1,6 +1,7 @@
-﻿using ASPNetCore_Modeldata.Models;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using WebShop.Data;
+using WebShop.Models;
 
 namespace ASPNetCore_Modeldata.Controllers
 {
@@ -16,6 +17,18 @@ namespace ASPNetCore_Modeldata.Controllers
         public IActionResult Index()
         {
             return View();
+        }
+
+        public IActionResult Producten(Categorie? categorie)
+        {
+            if (categorie == null)
+            {
+                return View();
+            }
+
+            var productenFiltered = ProductData.Producten.Where(p => p.Categorie == categorie)
+                                                         .OrderBy(p => p.Naam);
+            return View(productenFiltered);
         }
 
         public IActionResult Privacy()
