@@ -3,11 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33414.496
 MinimumVisualStudioVersion = 10.0.40219.1
-<<<<<<<< HEAD:ASPNetCore_Modeldata_Web.sln
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Webshop", "ASPNetCore_Modeldata_Webshop\Webshop.csproj", "{3F355BB0-48CB-417F-854D-CADF685EF93A}"
-========
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebShop", "ASPNetCore_Modeldata_WebShop\WebShop.csproj", "{3F355BB0-48CB-417F-854D-CADF685EF93A}"
->>>>>>>> 5a5675b5b06f74a00a69dc6104aa8062383c5b5f:ASPNetCore_Modeldata_WebShop.sln
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
