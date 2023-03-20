@@ -62,7 +62,7 @@ namespace ASPNetCore_Modeldata_Webshop.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Contact(string? email, string? naam, string? inhoud)
+        public async Task<IActionResult> Contact(string? email, string? naam, string? inhoud)
         {
             if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(naam) || string.IsNullOrWhiteSpace(inhoud))
             {
@@ -70,7 +70,7 @@ namespace ASPNetCore_Modeldata_Webshop.Controllers
             }
             else
             {
-                MailHelper.SendMail(email, naam, inhoud, "wim.hambrouck@ehb.be");
+                await MailHelper.SendMail(email, naam, inhoud, "wim.hambrouck@ehb.be");
                 ViewBag.Message = "Bericht verzonden!";
             }
 
